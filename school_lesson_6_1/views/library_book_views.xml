@@ -27,6 +27,7 @@
                         <h3><field name="name" placeholder="Name"/></h3>
                     </div>
                     <group>
+                        <field name="category_id"/>
                         <field name="reader_id"/>
                         <field name="taken_date"/>
                         <separator colspan="2"/>

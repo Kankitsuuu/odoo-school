@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+     <record id="book_poetry_demo" model="library.book">
+        <field name="name">Маруся Чурай</field>
+        <field name="category_id" ref="book_category_poetry"/>
+     </record>
+
+     <record id="book_novel_demo" model="library.book">
+        <field name="name">Поклик предків</field>
+        <field name="category_id" ref="book_category_novel"/>
+    </record>
+
+     <record id="book_story_demo" model="library.book">
+        <field name="name">Двадцять тисяч льє під водою</field>
+        <field name="category_id" ref="book_category_story"/>
+    </record>
+
+    <!-- Change record -->
+    <record id="book_novel_demo" model="library.book">
+        <field name="category_id" eval="False"/>
+    </record>
+
+    <!-- Delete record -->
+    <delete id="book_story_demo" model="library.book"/>
+
+</odoo>

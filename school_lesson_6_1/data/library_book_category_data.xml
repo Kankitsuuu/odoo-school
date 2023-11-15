@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+     <record id="book_category_poetry" model="library.book.category" forcecreate="False">
+        <field name="name">Поезія</field>
+    </record>
+
+     <record id="book_category_novel" model="library.book.category" forcecreate="False">
+        <field name="name">Роман</field>
+    </record>
+
+     <record id="book_category_story" model="library.book.category" forcecreate="False">
+        <field name="name">Повість</field>
+    </record>
+
+</odoo>
