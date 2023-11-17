@@ -1,6 +1,6 @@
-from .common import TestCommon
 from odoo.tests import tagged
 from odoo.exceptions import UserError
+from .common import TestCommon
 
 
 @tagged('post_install', '-at_install', 'library', 'action', 'odooschool')

@@ -1,5 +1,3 @@
-import datetime
-
 from odoo import api, fields, models
 
 
@@ -17,6 +15,7 @@ class LibraryBook(models.Model):
         comodel_name='res.users',
         string='Responsible',
         default=6,
+
     )
     active = fields.Boolean(
         string='Active',

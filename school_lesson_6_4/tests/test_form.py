@@ -19,4 +19,6 @@ class TestForm(TestCommon):
     # Task 6-4.4
     def test_book_default_get(self):
         book_form = Form(self.book_demo)
-        self.assertEqual(book_form.name, 'Demo Book')
+        self.assertEqual(book_form.type, 'book')
+        book_form.save()
+        self.assertEqual(self.book_demo.type, 'book')
