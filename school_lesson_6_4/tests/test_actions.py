@@ -1,9 +1,9 @@
-from odoo.addons.school_lesson_6_4.tests.common import TestCommon
+from .common import TestCommon
 from odoo.tests import tagged
 from odoo.exceptions import UserError
 
 
-@tagged('post_install', '-at_install', 'library')
+@tagged('post_install', '-at_install', 'library', 'action', 'odooschool')
 class TestAccessRights(TestCommon):
 
     def test_action_take_in(self):
@@ -17,3 +17,7 @@ class TestAccessRights(TestCommon):
         self.book_demo.with_user(self.library_admin).action_take_in()
         self.assertFalse(self.book_demo.reader_id)
 
+    # Task 6-4.3
+    def test_action_scrap_book(self):
+        self.book_demo.with_user(self.library_user).action_scrap_book()
+        self.assertFalse(self.book_demo.active)

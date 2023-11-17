@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="library_book_category_view_form" model="ir.ui.view">
+        <field name="name">library.book.category.view.form</field>
+        <field name="model">library.book.category</field>
+        <field name="inherit_id" ref="school_lesson_6_1.library_book_category_view_form"/>
+        <field name="arch" type="xml">
+             <xpath expr="//sheet/group" position="before">
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_open_books"
+                                type="object"
+                                icon="fa-book">
+                            <field string="Books" name="book_total" widget="statinfo"/>
+                        </button>
+                    </div>
+             </xpath>
+        </field>
+    </record>
+</odoo>

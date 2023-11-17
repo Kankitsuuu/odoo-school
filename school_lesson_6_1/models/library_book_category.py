@@ -1,5 +1,3 @@
-import time
-
 from odoo import models, fields
 
 

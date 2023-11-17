@@ -7,7 +7,12 @@ ERR_MSG = _lt("You can't lend a book in advance.")
 class LibraryBook(models.Model):
     _inherit = 'library.book'
 
-    description = fields.Text(translate=True)
+    description = fields.Text(
+        translate=True,
+    )
+    category_id = fields.Many2one(
+        comodel_name='library.book.category',
+    )
 
     def write(self, vals):
         if vals.get('taken_date') and \
